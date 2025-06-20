@@ -23,7 +23,7 @@ def create_user():
         'name': data['name'],
         'email': data['email']
     }
-    # """Save the new user's information"""
+    """Save the new user's information"""
     with open('users.json', 'r') as users_file:
         users = json.load(users_file if users_file else dict())
         users[user_id] = new_user
@@ -44,10 +44,12 @@ def get_user(user_id):
     """ If we find the user, send back their information."""
     return jsonify(users[user_id]), 200
 
-#endpoint for displaying all users
+"""endpoint for displaying all users"""
+
 @app.route('/users', methods=['GET'])
 def get_users():
     """This function returns all users."""
+    
     with open('users.json', 'r') as users_file:
         users = json.load(users_file if users_file else dict())
     return jsonify(users), 200
