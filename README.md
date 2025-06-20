@@ -13,6 +13,7 @@ User data is stored in a local JSON file (users.json).
     . Language: Python 3.x
     . Framework: Flask
     . Storage: JSON file for persistence
+    . Postman: for easy way for postign users or getting users
 
 # Setup Instructions
 
@@ -70,7 +71,8 @@ curl http://localhost:5000/users
 
 # Project Structure
 
-.
 ├── app.py              # Flask API
+
 ├── users.json          # User data storage
+
 └── README.md           # This documentation
